@@ -105,10 +105,6 @@ public class OpenFilePlugin implements MethodCallHandler
                     if(!isFileAvailable()){
                         return;
                     }
-                    if (!isMediaStorePath() && !Environment.isExternalStorageManager()) {
-                        result(-3, "Permission denied: android.Manifest.permission.MANAGE_EXTERNAL_STORAGE");
-                        return;
-                    }
                 }
                 if (canStartActivityWithPermission()) {
                     startActivity();
